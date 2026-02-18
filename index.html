@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Surviving WallStreet</title>
+</head>
+<body style="background:black;color:lime;text-align:center;front:Arial;">
+
+<h1Money Surviving WallStreet money</h1>
+<p>Welcome Stepphion Sutton</p>
+
+<button onclick="makeMoney()">Click To Hustle</button>
+<button onclick="buyUpgrade()">Buy Upgrade ($500)</button>
+
+<h2 id="money">$0</h2>
+
+<script>
+let cash = 0;
+let multiplier = 100;
+
+function makeMoney() {
+    cash += multiplier;
+    document.getElementById("money").innerText = "$" + cash;
+}
+
+function buyUpgrade() {
+    if (cash >=1000) {
+        cash -= 1000;
+        multiplier = 1000;
+        document.getElementById("money").innerText = "$" + cash;
+        alert("Upgrade Purchased! You now earn $1000 per click!");
+    } else {
+        alert("Not enough money!");
+    }
+}
+</script>
+
+</body>
+</html>
